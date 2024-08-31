@@ -1,0 +1,33 @@
+[project]
+name = "test-llama3-from-scratch"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Nicolas Largueze", email = "nick@nicklabs.io" }
+]
+dependencies = [
+    "sentencepiece>=0.2.0",
+    "tiktoken>=0.7.0",
+    "torch>=2.4.0",
+    "blobfile>=3.0.0",
+    "matplotlib>=3.9.2",
+    "jupyter>=1.1.1",
+    "ipykernel>=6.29.5",
+    "llama-toolchain>=0.0.10",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/test_llama3_from_scratch"]
